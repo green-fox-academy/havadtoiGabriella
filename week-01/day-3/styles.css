@@ -1,0 +1,92 @@
+body{
+    background-image: url("/assets/hatterkep.png");
+    background-repeat: repeat;
+    font-family: courier, serif;
+    margin:0;
+}
+
+header{
+  background-color: #333333;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+}
+
+.topnav a {
+color: #ff0099;
+float: left;
+text-align: center;
+padding: 14px 16px;
+text-decoration: underline;
+font-size: 17px;
+}
+
+#links{
+  float: right;
+  margin-right: 10%;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 3px;
+  
+}
+
+#logo{
+  margin-left: 10%;
+  width: 3%;
+  float: left;
+}
+
+#name{
+  padding-top: 5%;
+  font-size: 60px;
+  margin-left: 6%;
+  font-family: 'Roboto Slab', serif;
+}
+
+#title{
+  margin-left: 6%;
+  color: #ff0099;
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+  
+#about{
+  margin-left: 6%;
+  text-align: justify;
+  line-height: 30px;
+  font-size: 22px;
+  margin-right: 6%;
+  font-family: 'Roboto Slab', serif;
+}
+
+#separator{
+  text-align: center;
+  display: block;
+  font-size: 300%;
+}
+
+#defTitle{
+  text-align: center;
+  display: block;
+  font-size: 40px;
+}
+
+.definitions{
+  margin-left: 6%;
+  text-align: justify;
+  line-height: 30px;
+  font-size: large;
+  margin-right: 6%;
+  font-family: 'Roboto Slab', serif;
+}
+
+.subtitles{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 80px;
+}
