@@ -1,0 +1,14 @@
+L‚pj be a github-felhasznalonev k”nyvt rba
+N‚zd meg a v ltoztat sokat git seg¡ts‚g‚vel
+Add ‹ket hozz  a stage-hez
+Hozz l‚tre egy commit-ot j¢l ‚rthet‹ zenettel
+L‚pj be a mai naphoz tartoz¢ k”nyvt rba
+Hozz l‚tre 5 k”nyvt rat ‚s benne f jlokat tartalommal
+N‚zd meg a v ltoztat sokat git seg¡ts‚g‚vel
+Add ‹ket hozza a stage-hez
+Hozz l‚tre egy commit-ot j¢l ‚rthet‹ zenettel
+V ltoztatsd meg k‚t f jl tartalm t
+N‚zd meg a v ltoztat sokat git seg¡ts‚g‚vel
+Hozz l‚tre egy commit-ot j¢l ‚rthet‹ zenettel
+Publik ld a v ltoztat saidat GitHub-ra
+N‚zd meg a v ltoztat sokat GitHub-on
