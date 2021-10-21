@@ -9,7 +9,8 @@ public class Colors {
 // - A `colors[2]` pedig a pink árnyalatait:
 //   `"orchid", "violet", "pink", "hot pink"`
 
-        String[][] colors = new String[3][5];
+        String colors = {{"lime", "forest green", "olive", "pale green", "spring green"}, {"orange red", "red", "tomato"}, {"orchid", "violet", "pink", "hot pink"}};
+       /* String[][] colors = new String[3][5];
         colors[0][0] = "lime, ";
         colors[0][1] = "forest green, ";
         colors[0][2] = "olive, ";
@@ -27,7 +28,7 @@ public class Colors {
         colors[2][2] = "pink, ";
         colors[2][3] = "hot pink, ";
         colors[2][4] = " ";
-
+*/
         for (int i = 0; i < colors.length; i++) {
             for (int j = 0; j < colors[i].length; j++) {
                 System.out.print(colors[i][j] + " ");
