@@ -1,6 +1,8 @@
+package com.gfa.havadtoigabriella;
+
 public class HelloMe {
   public static void main(String[] args) {
-    // Úgy módosítsd a programot, hogy téged üdvözöljön a Világ helyett
+    // Modify this program to greet you instead of the World!
     String name = "Gabi";
     System.out.println("Hello " + name + "!");
   }

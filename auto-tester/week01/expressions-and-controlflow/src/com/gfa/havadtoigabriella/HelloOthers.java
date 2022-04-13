@@ -2,11 +2,12 @@ package com.gfa.havadtoigabriella;
 
 public class HelloOthers {
   public static void main(String[] args) {
-    // Üdvözöld 3 osztálytársad 3 sorban kiiratva a nevüket, ehhez hasonlóan:
+    // Greet 3 of your classmates with this program in three separate lines
+    // like:
     //
-    // Helló Eszter!
-    // Helló Maris!
-    // Helló Józsi!
-    System.out.println("Hello Mónika!\nHello Eszter!\nHello Szilvi!");
+    // Hello, Esther!
+    // Hello, Mary!
+    // Hello, Joe!
+    System.out.println("Hello Mary!\nHello Esther!\nHello Joe!");
   }
 }
