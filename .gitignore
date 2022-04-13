@@ -1,4 +1,14 @@
-".idea" 
-"out" 
-"*.iml" 
-"*.xml" 
+*.class
+*~
+.DS_Store
+.vscode
+out
+.idea
+*.iml
+
+# Log file
+*.log
+
+#BlueJ files
+*ctxt
+.xml
