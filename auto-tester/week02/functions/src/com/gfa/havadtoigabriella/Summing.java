@@ -1,4 +1,4 @@
-package com.company;
+package com.gfa.havadtoigabriella;
 
 public class Summing {
   public static void main(String[] args) {

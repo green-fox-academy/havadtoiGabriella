@@ -1,4 +1,4 @@
-package com.company;
+package com.gfa.havadtoigabriella;
 
 public class Factorial {
   public static void main(String[] args) {
