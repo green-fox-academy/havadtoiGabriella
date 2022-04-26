@@ -13,8 +13,18 @@ public class Reverse {
     System.out.println(reverse(toBeReversed));
   }
 
+  // With charAt
+  public static String reverse(String toBeReversed) {
+    StringBuilder reversedLine = new StringBuilder();
+
+    for (int i = 0; i < toBeReversed.length(); i++) {
+      reversedLine.append(toBeReversed.charAt(toBeReversed.length() - 1 - i));
+    }
+    return reversedLine.toString();
+  }
+
   //With char array
-  private static String reverse(String toBeReversed) {
+  private static String reverse2(String toBeReversed) {
     char[] charSentence = toBeReversed.toCharArray();
     char[] newCharSentence = new char[charSentence.length];
 
@@ -28,10 +38,10 @@ public class Reverse {
   }
 
   // With Stringbuilder
-  public static String reverse2(String line) {
-    StringBuilder newLine = new StringBuilder(line);
-    newLine.reverse();
-    return newLine.toString();
-  }
+//  public static String reverse3(String line) {
+//    StringBuilder newLine = new StringBuilder(line);
+//    newLine.reverse();
+//    return newLine.toString();
 }
+
 
