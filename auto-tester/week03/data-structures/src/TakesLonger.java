@@ -25,7 +25,6 @@ public class TakesLonger {
     System.out.println(fullSentence);
 
     //THIRD ATTEMPT
-    int indexOfTheBeginningOfSecondPart = quote.indexOf("you");
     String toBeInsterted = "always takes longer than ";
     System.out.println(insertString(quote, toBeInsterted, index - 1));
   }
