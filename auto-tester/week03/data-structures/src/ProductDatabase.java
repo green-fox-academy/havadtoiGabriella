@@ -38,7 +38,7 @@ Bread
     System.out.println(howMuchDoesItCost("Fish", products));
     System.out.println(mostExpensive(products));
     System.out.println(avgPrice(products));
-    System.out.println(howManyUnder300(products));
+    System.out.println(howManyUnderCertainPrice(300, products));
     System.out.println(isThereAnythingForThisExactPrice(125, products));
     System.out.println(cheapestProduct(products));
   }
@@ -69,10 +69,10 @@ Bread
     return avg;
   }
 
-  public static int howManyUnder300(Map<String, Integer> productsList) {
+  public static int howManyUnderCertainPrice(int price, Map<String, Integer> productsList) {
     int count = 0;
     for (Map.Entry items : productsList.entrySet()) {
-      if ((int) items.getValue() < 300) {
+      if ((int) items.getValue() < price) {
         count++;
       }
     }
