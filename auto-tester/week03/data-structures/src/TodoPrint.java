@@ -15,7 +15,7 @@ public class TodoPrint {
     //FIRST ATTEMPT
     String first = "My todo:\n";
     String second = " - Download games\n";
-    String third = " - Diablo\n";
+    String third = " \t- Diablo\n";
 
     todoText = "My todo:\n" + todoText;
     todoText = todoText.concat(second);
