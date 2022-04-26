@@ -30,7 +30,6 @@ public class Reverse {
   // With Stringbuilder
   public static String reverse2(String line) {
     StringBuilder newLine = new StringBuilder(line);
-    int j = line.length();
     newLine.reverse();
     return newLine.toString();
   }
