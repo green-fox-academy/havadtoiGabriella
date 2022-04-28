@@ -1,11 +1,9 @@
 package com.gfa.havadtoigabriella;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PrintEachLine {
@@ -14,7 +12,7 @@ public class PrintEachLine {
 
   public static void main(String[] args) {
     Path filepath = Paths.get("src/my-file.txt");
-    List<String> lines = new ArrayList<>();
+    List<String> lines;
     try {
       lines = Files.readAllLines(filepath);
       System.out.println(lines);
