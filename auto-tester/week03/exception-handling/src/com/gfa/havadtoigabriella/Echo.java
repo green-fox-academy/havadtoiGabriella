@@ -1,3 +1,5 @@
+package com.gfa.havadtoigabriella;
+
 public class Echo {
   /*
   Create a void function that receives a String as parameter
