@@ -10,7 +10,7 @@ If the user input is not an integer (mismatch), it should return -1
 Catch the specific exception here, not just Exception
    */
   public static void main(String[] args) {
-    mismatchFinder();
+    System.out.println(mismatchFinder());
   }
 
   public static Integer mismatchFinder() {
