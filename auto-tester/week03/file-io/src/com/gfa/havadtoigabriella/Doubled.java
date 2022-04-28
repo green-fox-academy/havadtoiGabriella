@@ -32,16 +32,6 @@ public class Doubled {
     return contentOfFile;
   }
 
-  public static void writeToFile(String nameOfFileToWrite, String content) {
-    List<String> writeableFormat = Arrays.asList(content);
-    Path pathOfDecryptedFile = Paths.get(nameOfFileToWrite);
-    try {
-      Files.write(pathOfDecryptedFile, writeableFormat);
-    } catch (IOException e) {
-      System.out.println("Unable to write file.");
-    }
-  }
-
   public static String decryption(String contentToDecrypt) {
     String[] textToChars = contentToDecrypt.split("");
     List<String> decrypted = new ArrayList<>();
@@ -57,6 +47,16 @@ public class Doubled {
     }
     String fulltext = sb.toString();
     return fulltext;
+  }
+
+  public static void writeToFile(String nameOfFileToWrite, String content) {
+    List<String> writeableFormat = Arrays.asList(content);
+    Path pathOfDecryptedFile = Paths.get(nameOfFileToWrite);
+    try {
+      Files.write(pathOfDecryptedFile, writeableFormat);
+    } catch (IOException e) {
+      System.out.println("Unable to write file.");
+    }
   }
 }
 
