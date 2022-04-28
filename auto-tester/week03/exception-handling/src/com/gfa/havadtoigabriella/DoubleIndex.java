@@ -11,7 +11,7 @@ And not throw an exception
     int[] myArray = {1, 2, 4, 6, 12};
     System.out.println(doubleIndex(myArray, 12));
   }
-  
+
   public static int doubleIndex(int[] numArray, int index) {
     try {
       int value = numArray[index] * 2;
