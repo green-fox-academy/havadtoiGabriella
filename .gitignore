@@ -12,3 +12,16 @@ out
 #BlueJ files
 *ctxt
 .xml
+
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
+gradlew
+*.bat
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Cache of project
+.gradletasknamecache
