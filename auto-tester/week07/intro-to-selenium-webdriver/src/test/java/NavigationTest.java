@@ -31,8 +31,7 @@ public class NavigationTest {
         .as("Title should be W3Schools Online Web Tutorials")
         .isEqualTo("W3Schools Online Web Tutorials");
     driver.navigate().forward();
-    WebElement element = driver.findElement(By.id("gsc-i-id1"));
-    element.sendKeys("java tutorial");
+    driver.findElement(By.name("search")).sendKeys("java tutorial");
   }
 
   @AfterAll
