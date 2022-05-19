@@ -1,0 +1,37 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.assertj.core.api.Assertions.*;
+
+public class NavigationTest {
+
+  @BeforeAll
+  public static void setUp() {
+    WebDriverManager.chromedriver().setup();
+  }
+
+  @Test
+  public void navigationTest() throws InterruptedException {
+    WebDriverManager.chromedriver().setup();
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://www.w3schools.com/");
+    driver.manage().window().maximize();
+    Thread.sleep(3000);
+    driver.navigate().to("https://www.javatpoint.com/");
+    driver.navigate().back();
+    Thread.sleep(3000);
+    String title = driver.getTitle();
+    assertThat(title).isEqualTo("W3Schools Online Web Tutorials");
+    driver.navigate().forward();
+    WebElement element = driver.findElement(By.id("gsc-i-id1"));
+    element.sendKeys("java tutorial");
+    Thread.sleep(3000);
+    driver.quit();
+  }
+}
+
