@@ -27,13 +27,14 @@ public class NavigationTest {
     driver.navigate().back();
     Thread.sleep(3000);
     String title = driver.getTitle();
-    assertThat(title).isEqualTo("W3Schools Online Web Tutorials");
+    assertThat(title)
+        .as("Title should be W3Schools Online Web Tutorials")
+        .isEqualTo("W3Schools Online Web Tutorials");
     driver.navigate().forward();
     WebElement element = driver.findElement(By.id("gsc-i-id1"));
     element.sendKeys("java tutorial");
-    Thread.sleep(3000);
   }
-  
+
   @AfterAll
   public static void tearDown() {
     driver.quit();
