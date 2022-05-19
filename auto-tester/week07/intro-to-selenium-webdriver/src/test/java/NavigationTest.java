@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.assertj.core.api.Assertions.*;
 
 public class NavigationTest {
+  private static WebDriver driver;
 
   @BeforeAll
   public static void setUp() {
@@ -17,8 +19,7 @@ public class NavigationTest {
 
   @Test
   public void navigationTest() throws InterruptedException {
-    WebDriverManager.chromedriver().setup();
-    WebDriver driver = new ChromeDriver();
+    driver = new ChromeDriver();
     driver.get("https://www.w3schools.com/");
     driver.manage().window().maximize();
     Thread.sleep(3000);
@@ -31,6 +32,10 @@ public class NavigationTest {
     WebElement element = driver.findElement(By.id("gsc-i-id1"));
     element.sendKeys("java tutorial");
     Thread.sleep(3000);
+  }
+  
+  @AfterAll
+  public static void tearDown() {
     driver.quit();
   }
 }
