@@ -16,7 +16,7 @@ public class OpenAPageTest {
   }
 
   @Test
-  public static void openAPageTest() throws InterruptedException {
+  public void openAPageTest() throws InterruptedException {
     driver = new ChromeDriver();
     driver.get("https://the-internet.herokuapp.com/");
     driver.manage().window().maximize();
@@ -26,13 +26,6 @@ public class OpenAPageTest {
   @AfterAll
   public static void tearDown() {
     driver.quit();
-  }
-
-  public static void main(String[] args) throws InterruptedException {
-    OpenAPageTest openPage = new OpenAPageTest();
-    openPage.setup();
-    openPage.openAPageTest();
-    openPage.tearDown();
   }
 
 }
