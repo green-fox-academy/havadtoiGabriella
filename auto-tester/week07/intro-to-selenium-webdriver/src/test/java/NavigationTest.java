@@ -35,9 +35,9 @@ public class NavigationTest {
     driver.quit();
   }
 
-  public void checkPageTitle(String title) {
-    boolean isTheTextPresentInHTML = driver.getPageSource().contains(title);
-    assertThat(isTheTextPresentInHTML).isTrue();
+  public void checkPageTitle(String expectedTitle) {
+    String actualTitle = driver.getTitle();
+    assertThat(actualTitle).isEqualTo(expectedTitle);
   }
 }
 
