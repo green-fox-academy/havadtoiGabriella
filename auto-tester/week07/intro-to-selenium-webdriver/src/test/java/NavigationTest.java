@@ -17,18 +17,15 @@ public class NavigationTest {
   }
 
   @Test
-  public void navigationTest() throws InterruptedException {
+  public void navigationTest() {
     driver = new ChromeDriver();
     driver.get("https://www.w3schools.com/");
     driver.manage().window().maximize();
-    Thread.sleep(3000);
+    checkPageTitle("W3Schools Online Web Tutorials");
     driver.navigate().to("https://www.javatpoint.com/");
+    checkPageTitle("Tutorials List - Javatpoint");
     driver.navigate().back();
-    Thread.sleep(3000);
-    String title = driver.getTitle();
-    assertThat(title)
-        .as("Title should be W3Schools Online Web Tutorials")
-        .isEqualTo("W3Schools Online Web Tutorials");
+    checkPageTitle("W3Schools Online Web Tutorials");
     driver.navigate().forward();
     driver.findElement(By.name("search")).sendKeys("java tutorial");
   }
@@ -36,6 +33,11 @@ public class NavigationTest {
   @AfterAll
   public static void tearDown() {
     driver.quit();
+  }
+
+  public void checkPageTitle(String title) {
+    boolean isTheTextPresentInHTML = driver.getPageSource().contains(title);
+    assertThat(isTheTextPresentInHTML).isTrue();
   }
 }
 
