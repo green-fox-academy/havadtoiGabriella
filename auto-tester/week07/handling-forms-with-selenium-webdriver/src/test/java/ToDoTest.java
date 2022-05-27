@@ -33,7 +33,7 @@ public class ToDoTest {
   }
 
   @Test
-  public void lambdaTest() throws InterruptedException {
+  public void lambdaTest() {
     driver.get("https://lambdatest.github.io/sample-todo-app/");
     driver.findElement(By.id("sampletodotext")).sendKeys("kittycat");
     driver.findElement(By.id("addbutton")).submit();
