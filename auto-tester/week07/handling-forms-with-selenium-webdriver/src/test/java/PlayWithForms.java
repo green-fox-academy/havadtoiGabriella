@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import java.util.Locale;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -37,7 +36,7 @@ public class PlayWithForms {
   }
 
   @Test
-  public void formTest() throws InterruptedException {
+  public void formTest() {
     driver.get("https://getbootstrap.com/docs/5.0/examples/checkout/");
     driver.findElement(By.id("address")).sendKeys("1234, Main Street");
 
