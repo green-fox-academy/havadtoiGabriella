@@ -58,8 +58,8 @@ public class PlayWithAlertsTest {
         .as("You pressed OK!");
 
     driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
-    Alert alertThird = wait.until(ExpectedConditions.alertIsPresent());
-    alertThird.dismiss();
+    alertSecond = wait.until(ExpectedConditions.alertIsPresent());
+    alertSecond.dismiss();
     assertThat(driver.findElement(By.id("confirm-demo")).getText()).isEqualTo("You pressed Cancel!")
         .as("You pressed Cancel!");
 
