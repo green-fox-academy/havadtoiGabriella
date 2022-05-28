@@ -68,16 +68,16 @@ public class PlayWithAlertsTest {
         driver.findElements(By.xpath("//button[@class='btn btn-default btn-lg']"));
     WebElement promtButton = buttons.get(1);
     promtButton.click();
-    Alert alertFourth = wait.until(ExpectedConditions.alertIsPresent());
-    alertFourth.dismiss();
+    Alert alertThird = wait.until(ExpectedConditions.alertIsPresent());
+    alertThird.dismiss();
     assertThat(driver.findElement(By.id("prompt-demo"))
         .getText())
         .isEqualTo("")
         .as("No message should appear");
 
     promtButton.click();
-    alertFourth.sendKeys("Gabi");
-    alertFourth.accept();
+    alertThird.sendKeys("Gabi");
+    alertThird.accept();
     assertThat(driver.findElement(By.id("prompt-demo"))
         .getText())
         .isEqualTo("You have entered 'Gabi' !")
