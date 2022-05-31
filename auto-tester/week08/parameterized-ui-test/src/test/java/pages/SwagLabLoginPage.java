@@ -34,7 +34,7 @@ public class SwagLabLoginPage extends BasePage{
     submitButton.click();
   }
 
-  public WebElement getErrorMessage(){
-    return errorMessage;
+  public String  getErrorMessage(){
+    return errorMessage.getText();
   }
 }
