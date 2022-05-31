@@ -14,7 +14,7 @@ public class SwagLabLoginPageTest extends BaseTest {
     loginPage.fillUserNameField(username);
     loginPage.fillPasswordField(password);
     loginPage.clickLoginButton();
-    assertThat(loginPage.getErrorMessage().getText())
+    assertThat(loginPage.getErrorMessage())
         .as("With invalid data input, the error message should be: Epic sadface: Username and password do not match any user in this service")
         .contains("Epic sadface: Username and password do not match any user in this service");
   }
