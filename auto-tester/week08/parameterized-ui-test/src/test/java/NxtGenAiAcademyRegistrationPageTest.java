@@ -3,7 +3,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import pages.NxtGenAiAcademyRegistrationPage;
-import pages.SuccessPage;
+import pages.NxtGenAiAcademySuccessPage;
 
 public class NxtGenAiAcademyRegistrationPageTest extends BaseTest {
 
@@ -18,8 +18,8 @@ public class NxtGenAiAcademyRegistrationPageTest extends BaseTest {
     regPage.pickGenderRandomly();
     regPage.fillEmailField(email);
     regPage.fillVerificationField(verificationNumber);
-    SuccessPage successPage = regPage.clickSubmitButton();
-    assertThat(successPage.getSuccessMessage())
+    NxtGenAiAcademySuccessPage nxtGenAiAcademySuccessPage = regPage.clickSubmitButton();
+    assertThat(nxtGenAiAcademySuccessPage.getSuccessMessage())
         .as("Successful registration should give the message: Registration Form is Successfully Submitted")
         .contains("Registration Form is Successfully Submitted.");
   }
