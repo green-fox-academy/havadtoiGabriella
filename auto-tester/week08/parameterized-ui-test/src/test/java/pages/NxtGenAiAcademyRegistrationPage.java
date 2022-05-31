@@ -52,9 +52,9 @@ public class NxtGenAiAcademyRegistrationPage extends BasePage {
     verificationField.sendKeys(verificationNumber);
   }
 
-  public SuccessPage clickSubmitButton() {
+  public NxtGenAiAcademySuccessPage clickSubmitButton() {
     submitButton.click();
-    return new SuccessPage(driver);
+    return new NxtGenAiAcademySuccessPage(driver);
   }
 
 
