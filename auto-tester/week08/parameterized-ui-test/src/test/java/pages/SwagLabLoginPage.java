@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SwagLabLoginPage extends BasePage{
+public class SwagLabLoginPage extends BasePage {
   public SwagLabLoginPage(WebDriver driver) {
     super(driver);
   }
@@ -18,23 +18,24 @@ public class SwagLabLoginPage extends BasePage{
   @FindBy(tagName = "h3")
   WebElement errorMessage;
 
-  public void load(){
+  public void load() {
     driver.get("https://www.saucedemo.com/");
   }
 
-  public void fillUserNameField(String username){
+  public void fillUserNameField(String username) {
     userNameField.sendKeys(username);
   }
 
-  public void fillPasswordField(String password){
+  public void fillPasswordField(String password) {
     passwordField.sendKeys(password);
   }
 
-  public void clickLoginButton(){
+  public SwagLabInventoryPage clickLoginButton() {
     submitButton.click();
+    return new SwagLabInventoryPage(driver);
   }
 
-  public String  getErrorMessage(){
+  public String getErrorMessage() {
     return errorMessage.getText();
   }
 }
