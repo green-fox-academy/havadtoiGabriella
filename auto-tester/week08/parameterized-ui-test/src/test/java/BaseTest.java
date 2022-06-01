@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.Duration;
 import java.util.Properties;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,6 +31,7 @@ public class BaseTest {
       driver = new EdgeDriver();
     }
     driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
   }
 
   @AfterEach
