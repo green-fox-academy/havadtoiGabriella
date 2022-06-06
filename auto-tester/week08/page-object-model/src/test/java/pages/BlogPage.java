@@ -14,6 +14,7 @@ public class BlogPage extends BasePage {
   WebElement firstBlogPost;
 
   public boolean isFirstBlogPostDisplayed() {
+    LOG.info("Checking if first blogpost is displayed");
     return firstBlogPost.isDisplayed();
   }
 }

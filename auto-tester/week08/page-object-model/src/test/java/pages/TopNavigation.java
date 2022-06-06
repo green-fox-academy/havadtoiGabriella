@@ -20,15 +20,18 @@ public class TopNavigation extends BasePage {
   WebElement aboutButton;
 
   public void load() {
+    LOG.info("Loading page");
     driver.get("https://test-automation-demo.greenfox.academy/");
   }
 
   public HomePage goToHome() {
+    LOG.info("Clicking on HomePage button");
     homePageButton.click();
     return new HomePage(driver);
   }
 
   public BlogPage goToBlog() {
+    LOG.info("Clicking on Blog button");
     blogPageButton.click();
     return new BlogPage(driver);
   }
