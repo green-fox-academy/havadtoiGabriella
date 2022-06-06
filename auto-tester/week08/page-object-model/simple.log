@@ -1,0 +1,18 @@
+2022-06-06 23:09:29:049 +0200 [Test worker] INFO BaseTest - Setup the driver
+2022-06-06 23:09:29:522 +0200 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+2022-06-06 23:09:29:553 +0200 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-06 23:09:32:680 +0200 [Test worker] INFO BaseTest - Start of test: navigationToHomePageTest(TestInfo)
+2022-06-06 23:09:32:711 +0200 [Test worker] INFO pages.BasePage - Loading page
+2022-06-06 23:09:33:509 +0200 [Test worker] INFO pages.BasePage - Clicking on HomePage button
+2022-06-06 23:09:33:977 +0200 [Test worker] INFO pages.BasePage - Checking if Blog button in menu bar is displayed
+2022-06-06 23:09:34:653 +0200 [Test worker] INFO BaseTest - End of testnavigationToHomePageTest(TestInfo)
+2022-06-06 23:09:34:657 +0200 [Test worker] INFO BaseTest - Shut down the driver
+2022-06-06 23:09:35:864 +0200 [Test worker] INFO BaseTest - Setup the driver
+2022-06-06 23:09:35:896 +0200 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+2022-06-06 23:09:35:896 +0200 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-06 23:09:37:391 +0200 [Test worker] INFO BaseTest - Start of test: navigationToBlogPageTest(TestInfo)
+2022-06-06 23:09:37:392 +0200 [Test worker] INFO pages.BasePage - Loading page
+2022-06-06 23:09:38:262 +0200 [Test worker] INFO pages.BasePage - Clicking on Blog button
+2022-06-06 23:09:38:498 +0200 [Test worker] INFO pages.BasePage - Checking if first blogpost is displayed
+2022-06-06 23:09:38:562 +0200 [Test worker] INFO BaseTest - End of testnavigationToBlogPageTest(TestInfo)
+2022-06-06 23:09:38:562 +0200 [Test worker] INFO BaseTest - Shut down the driver
