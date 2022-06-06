@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.qameta.allure.Step;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
