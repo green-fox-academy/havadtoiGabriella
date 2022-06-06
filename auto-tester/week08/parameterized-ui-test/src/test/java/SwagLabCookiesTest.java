@@ -1,5 +1,8 @@
 import static org.assertj.core.api.Assertions.assertThat;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
@@ -9,6 +12,8 @@ import pages.SwagLabLoginPage;
 public class SwagLabCookiesTest extends BaseTest {
 
   @Test
+  @Description("Deleting session cookie")
+  @Severity(SeverityLevel.NORMAL)
   public void deleteSessionCookieTest() {
     SwagLabLoginPage loginPage = new SwagLabLoginPage(driver);
     loginPage.load();
@@ -27,6 +32,8 @@ public class SwagLabCookiesTest extends BaseTest {
   }
 
   @Test
+  @Description("Testing logout")
+  @Severity(SeverityLevel.NORMAL)
   public void logoutButtonTest() {
     SwagLabLoginPage loginPage = new SwagLabLoginPage(driver);
     loginPage.load();

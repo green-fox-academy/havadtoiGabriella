@@ -1,3 +1,6 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -7,6 +10,8 @@ import org.openqa.selenium.By;
 public class MultipleWindowsHandlingTest extends BaseTest {
 
   @Test
+  @Description("Opening 3 new window and submit data")
+  @Severity(SeverityLevel.NORMAL)
   public void multipleWindowsTest() {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     driver.get("https://demo.guru99.com/popup.php");

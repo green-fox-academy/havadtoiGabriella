@@ -1,3 +1,6 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -7,6 +10,8 @@ import org.openqa.selenium.WebElement;
 public class LetsColor extends BaseTest {
 
   @Test
+  @Description("Using JSExecutor")
+  @Severity(SeverityLevel.MINOR)
   public void jsExecutorTest() {
     driver.get("https://courses.letskodeit.com/practice");
     JavascriptExecutor js = (JavascriptExecutor) driver;
