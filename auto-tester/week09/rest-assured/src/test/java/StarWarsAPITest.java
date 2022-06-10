@@ -1,7 +1,11 @@
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.get;
 import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.*;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import java.util.List;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -20,5 +24,29 @@ public class StarWarsAPITest {
     get("/people/1")
         .then()
         .time(lessThan(3000L));
+  }
+
+  @Test
+  public void responseBodyTest() {
+    get("/people/5")
+        .then()
+        .assertThat().statusCode(200).and()
+        .body("hair_color", containsString("brown"));
+  }
+
+  @Test
+  public void responseBodyTest2() {
+    get("/starships/9")
+        .then()
+        .assertThat().statusCode(200).and()
+        .body(containsString("Death Star"));
+  }
+
+  @Test
+  public void responseBodyTest3() {
+    Response response = get("/species/5");
+    JsonPath js = response.jsonPath();
+    List filmArray = js.get("films");
+    assertThat(filmArray.size(), equalTo(2));
   }
 }
