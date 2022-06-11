@@ -1,4 +1,5 @@
 import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
@@ -48,5 +49,20 @@ public class StarWarsAPITest {
     JsonPath js = response.jsonPath();
     List filmArray = js.get("films");
     assertThat(filmArray.size(), equalTo(2));
+  }
+
+  @Test
+  public void searchForPlanetByNameTest() {
+    given()
+        .param("search", "Kamino")
+        .when()
+        .get("/planets")
+        .then()
+        .log().ifValidationFails()
+        .statusCode(200)
+        .body("results.terrain", contains("ocean"))
+        .and()
+        .body("count", equalTo(1));
+    ;
   }
 }
