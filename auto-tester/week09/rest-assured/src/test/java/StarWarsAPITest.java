@@ -1,7 +1,7 @@
-import static io.restassured.RestAssured.get;
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.*;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -63,6 +63,27 @@ public class StarWarsAPITest {
         .body("results.terrain", contains("ocean"))
         .and()
         .body("count", equalTo(1));
-    ;
+  }
+
+
+  @Test
+  public void shouldReturnResponseCode404Test() {
+    get("species/55")
+        .then()
+        .assertThat().statusCode(404);
+  }
+
+  @Test
+  public void jsonSchemaValidator() {
+    given()
+        .log().all()
+        .param("page", "2")
+        .when()
+        .get("/people/3")
+        .then()
+        .log().all()
+        .statusCode(200)
+        .body(matchesJsonSchemaInClasspath("schema.json"));
   }
 }
+
